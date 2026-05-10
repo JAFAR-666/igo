@@ -1,0 +1,16 @@
+export const defaultCategories = [
+  "Electrician",
+  "Plumber",
+  "Carpenter",
+  "Painter",
+  "Welder",
+  "Mason",
+  "AC Mechanic",
+  "Driver",
+  "Cleaner",
+  "Construction Worker",
+  "Helper",
+  "Packers & Movers",
+  "CCTV Technician",
+  "Home Repair",
+];

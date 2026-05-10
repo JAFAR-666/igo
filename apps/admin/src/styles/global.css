@@ -1,0 +1,187 @@
+:root {
+  color-scheme: light dark;
+  --bg: #f5f3ee;
+  --card: #fffdf7;
+  --text: #14213d;
+  --muted: #5f6c7b;
+  --accent: #ff7a00;
+  --accent-soft: #ffe4cc;
+  --border: #eadfd1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top, #fff8ef 0%, var(--bg) 55%);
+  color: var(--text);
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.login-page,
+.loading {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.login-card,
+.section-card,
+.metric-card,
+.wage-card,
+.complaint-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(20, 33, 61, 0.08);
+}
+
+.login-card {
+  width: min(420px, calc(100vw - 32px));
+  padding: 32px;
+  display: grid;
+  gap: 14px;
+}
+
+.login-card input,
+.login-card button {
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+}
+
+.login-card button {
+  background: var(--accent);
+  color: white;
+  border: none;
+}
+
+.eyebrow {
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.shell {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  min-height: 100vh;
+}
+
+.sidebar {
+  padding: 28px;
+  background: #111827;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.sidebar a {
+  color: #d4d4d8;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.sidebar__brand {
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.main-content {
+  padding: 32px;
+  display: grid;
+  gap: 24px;
+}
+
+.hero {
+  display: grid;
+  gap: 10px;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.metric-card,
+.section-card {
+  padding: 22px;
+}
+
+.metric-card h3 {
+  font-size: 32px;
+  margin: 10px 0 6px;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 16px;
+}
+
+.section-card__header {
+  margin-bottom: 16px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 12px 10px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+
+.wage-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.wage-card,
+.complaint-card {
+  padding: 16px;
+}
+
+.complaints {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.error-banner {
+  color: #9f1239;
+  background: #ffe4e6;
+  padding: 10px 12px;
+  border-radius: 12px;
+}
+
+@media (max-width: 960px) {
+  .shell {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .metrics-grid,
+  .dashboard-grid,
+  .complaints {
+    grid-template-columns: 1fr;
+  }
+}

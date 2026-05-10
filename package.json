@@ -1,8 +1,20 @@
 {
-  "name": "ilgo",
+  "name": "igo",
+  "private": true,
   "version": "1.0.0",
-  "main": "server.js",
+  "workspaces": [
+    "apps/api",
+    "apps/admin",
+    "apps/mobile"
+  ],
   "scripts": {
-    "start": "node server.js"
+    "dev:api": "npm run dev --workspace @igo/api",
+    "dev:admin": "npm run dev --workspace @igo/admin",
+    "dev:mobile": "npm run start --workspace @igo/mobile",
+    "build:api": "npm run build --workspace @igo/api",
+    "build:admin": "npm run build --workspace @igo/admin",
+    "typecheck:mobile": "npm run typecheck --workspace @igo/mobile",
+    "lint": "npm run lint --workspace @igo/api && npm run lint --workspace @igo/admin && npm run lint --workspace @igo/mobile",
+    "build": "npm run build:api && npm run build:admin && npm run typecheck:mobile"
   }
 }

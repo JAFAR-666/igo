@@ -1,0 +1,17 @@
+{
+  "expo": {
+    "name": "igo",
+    "slug": "igo",
+    "scheme": "igo",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "android": {
+      "package": "com.igo.marketplace",
+      "adaptiveIcon": {
+        "backgroundColor": "#F97316"
+      }
+    },
+    "plugins": []
+  }
+}

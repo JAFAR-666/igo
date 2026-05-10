@@ -1,5 +1,12 @@
-.env
-data
-dist
 node_modules
-*.zip
+dist
+.expo
+.turbo
+.env
+.env.local
+coverage
+apps/mobile/.expo
+apps/mobile/node_modules
+apps/admin/node_modules
+apps/api/node_modules
+uploads
